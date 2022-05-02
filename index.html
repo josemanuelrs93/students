@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Students</title>
+		<link rel="stylesheet" type="text/css" href="practica1-estilo.css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+		<script src="practica1-codigo.js"></script>
+	</head>
+	<body>
+		<h1>List of participating students</h1>
+		<div id="datos">
+
+			<p>(ID: 8 digits number with an uppercase letter)</p>
+			<fieldset>
+			<legend>Student data</legend>
+			<div>
+				<label for="nombre">
+				Student name:
+				<input type="text" id="nombreAlu"></input><span id="errorNom"></span>
+				</label>
+			</div>
+			<br />
+			<div>
+				<label for="dni">
+				Student ID:
+				<input type="text" id="dniAlu"></input><span id="errorDni"></span>
+				</label>
+			</div>
+			<br />
+			<div>
+				<label for="grupo">
+				Student group:
+				<select name="grupo" id="grupoAlu">
+				<option value="">(Choice a group)</option>
+				<option value="1smr">1ºSMR</option>
+				<option value="2smr">2ºSMR</option>
+				<option value="1daw">1ºDAW</option>
+				<option value="2daw">2ºDAW</option>
+				<option value="fp">1ºFPB</option>
+				</select><span id="errorGrupo"></span>
+				</label>
+			</div>
+			<br />
+			<div>
+				<label for="adul">
+				Adult:
+				<input type="checkbox" value="mayorEdad" id="edad"></input>
+			</label>
+			</div>
+			<br />
+			<input type="submit" id="bt-insert" value="Add student" onclick="validarDatos();totalAlumnos()"></input>
+			</fieldset>
+
+		</div> <br />
+		<table id="miTabla" border=1>
+			<thead>
+					<th>Name</th>
+					<th>ID</th>
+					<th>Group</th>
+					<th>Adult</th>
+					<th colspan=2>Options</th>
+			</thead>
+			<tbody id="cuerpo">
+
+			</tbody>
+			<tfoot id="oculto">
+				<tr>
+				<td colspan=4>Total students:</td>
+				<td id="contador"></td>
+				</tr>
+			</tfoot>
+		</table>
+
+	</body>
+
+</html>
